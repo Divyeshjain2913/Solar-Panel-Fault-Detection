@@ -1,0 +1,143 @@
+{
+  "model_name": "SolarPanel-MobileNetV2-Industrial",
+  "model_version": "v2.1.0",
+  "architecture": "MobileNetV2 (ImageNet Pretrained Transfer Learning)",
+  "training_date": "2026-11-11 15:58:04 UTC",
+  "dataset_information": {
+    "dataset_name": "Photovoltaic Panel Defect Classification Dataset",
+    "total_samples": 714,
+    "classes": [
+      "Bird-drop",
+      "Clean",
+      "Dusty",
+      "Electrical-damage",
+      "Physical-Damage",
+      "Snow-Covered"
+    ],
+    "input_resolution": [
+      224,
+      224,
+      3
+    ],
+    "split_ratio": "70% Train, 15% Val, 15% Test (Stratified, Zero-Leakage)"
+  },
+  "model_path": "models\\solar_mobilenet_v2_best.pth",
+  "evaluation_metrics": {
+    "test_accuracy": 78.15,
+    "macro_precision": 80.45,
+    "macro_recall": 78.99,
+    "macro_f1": 79.49,
+    "weighted_f1": 78.18,
+    "classification_report": {
+      "Bird-drop": {
+        "precision": 0.6956521739130435,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6808510638297872,
+        "support": 24.0
+      },
+      "Clean": {
+        "precision": 0.7777777777777778,
+        "recall": 0.75,
+        "f1-score": 0.7636363636363637,
+        "support": 28.0
+      },
+      "Dusty": {
+        "precision": 0.71875,
+        "recall": 0.8518518518518519,
+        "f1-score": 0.7796610169491526,
+        "support": 27.0
+      },
+      "Electrical-damage": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9285714285714286,
+        "support": 14.0
+      },
+      "Physical-Damage": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.7777777777777778,
+        "support": 9.0
+      },
+      "Snow-Covered": {
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1-score": 0.8387096774193549,
+        "support": 17.0
+      },
+      "accuracy": 0.7815126050420168,
+      "macro avg": {
+        "precision": 0.8045167644352427,
+        "recall": 0.7899289345367776,
+        "f1-score": 0.7948678880306441,
+        "support": 119.0
+      },
+      "weighted avg": {
+        "precision": 0.7871041532555051,
+        "recall": 0.7815126050420168,
+        "f1-score": 0.7817744175419262,
+        "support": 119.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        16,
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        21,
+        5,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        23,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0,
+        0,
+        13
+      ]
+    ]
+  },
+  "training_history": {},
+  "class_names": [
+    "Bird-drop",
+    "Clean",
+    "Dusty",
+    "Electrical-damage",
+    "Physical-Damage",
+    "Snow-Covered"
+  ],
+  "deployment_status": "Active"
+}

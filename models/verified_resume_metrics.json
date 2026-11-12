@@ -1,0 +1,237 @@
+{
+  "dataset": {
+    "total_clean": 869,
+    "clean_counts": {
+      "Bird-drop": 191,
+      "Clean": 193,
+      "Dusty": 190,
+      "Electrical-damage": 103,
+      "Physical-Damage": 69,
+      "Snow-Covered": 123
+    },
+    "algorithmic_splits": {
+      "train": 554,
+      "val": 119,
+      "test": 119,
+      "total": 792
+    },
+    "test_class_counts": {
+      "Bird-drop": 24,
+      "Clean": 28,
+      "Dusty": 27,
+      "Electrical-damage": 14,
+      "Physical-Damage": 9,
+      "Snow-Covered": 17
+    }
+  },
+  "model": {
+    "file_size_mb": 9.985333442687988,
+    "load_time_ms": 216.7207000311464,
+    "total_params": 2553862,
+    "backbone_params": 2223872,
+    "head_params": 329990,
+    "test_accuracy": 78.15126050420169,
+    "macro_precision": 80.45167644352426,
+    "macro_recall": 78.99289345367777,
+    "macro_f1": 79.48678880306441,
+    "weighted_f1": 78.17744175419263,
+    "classification_report": {
+      "Bird-drop": {
+        "precision": 0.6956521739130435,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6808510638297872,
+        "support": 24.0
+      },
+      "Clean": {
+        "precision": 0.7777777777777778,
+        "recall": 0.75,
+        "f1-score": 0.7636363636363637,
+        "support": 28.0
+      },
+      "Dusty": {
+        "precision": 0.71875,
+        "recall": 0.8518518518518519,
+        "f1-score": 0.7796610169491526,
+        "support": 27.0
+      },
+      "Electrical-damage": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9285714285714286,
+        "support": 14.0
+      },
+      "Physical-Damage": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.7777777777777778,
+        "support": 9.0
+      },
+      "Snow-Covered": {
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1-score": 0.8387096774193549,
+        "support": 17.0
+      },
+      "accuracy": 0.7815126050420168,
+      "macro avg": {
+        "precision": 0.8045167644352427,
+        "recall": 0.7899289345367776,
+        "f1-score": 0.7948678880306441,
+        "support": 119.0
+      },
+      "weighted avg": {
+        "precision": 0.7871041532555051,
+        "recall": 0.7815126050420168,
+        "f1-score": 0.7817744175419262,
+        "support": 119.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        16,
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        21,
+        5,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        23,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0,
+        0,
+        13
+      ]
+    ],
+    "latency": {
+      "mean_ms": 50.00381929526236,
+      "median_ms": 42.32554999180138,
+      "p90_ms": 75.78417994081975,
+      "p95_ms": 107.16141003067604,
+      "p99_ms": 140.49273191834808,
+      "min_ms": 23.962699924595654,
+      "max_ms": 176.29580001812428,
+      "std_ms": 24.745960246093706,
+      "throughput_fps": 19.998472398582273
+    }
+  },
+  "application": {
+    "endpoint_count": 11,
+    "endpoints": [
+      {
+        "path": "/api/dashboard/metrics",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_dashboard_metrics"
+      },
+      {
+        "path": "/api/inspections",
+        "methods": [
+          "POST"
+        ],
+        "name": "create_inspection"
+      },
+      {
+        "path": "/api/health",
+        "methods": [
+          "GET"
+        ],
+        "name": "health_check"
+      },
+      {
+        "path": "/api/predict",
+        "methods": [
+          "POST"
+        ],
+        "name": "predict_image"
+      },
+      {
+        "path": "/api/inspections",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_inspections"
+      },
+      {
+        "path": "/api/inspections/{inspection_id}",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_inspection"
+      },
+      {
+        "path": "/api/inspections/{inspection_id}",
+        "methods": [
+          "DELETE"
+        ],
+        "name": "delete_inspection"
+      },
+      {
+        "path": "/api/analytics",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_analytics"
+      },
+      {
+        "path": "/api/model/performance",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_model_performance"
+      },
+      {
+        "path": "/api/model/metrics",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_model_metrics"
+      },
+      {
+        "path": "/api/model/info",
+        "methods": [
+          "GET"
+        ],
+        "name": "get_model_info"
+      }
+    ],
+    "frontend_ts_files": 30,
+    "frontend_ts_lines": 3187,
+    "backend_py_files": 14,
+    "backend_py_lines": 2833
+  }
+}
